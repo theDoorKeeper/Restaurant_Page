@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Mali&display=swap');
+
+body{
+    font-family: 'Mali', cursive;
+    background-image: url("background.jpg");
+}
+header{
+    height: 8rem;
+    width: 80%;
+    background-color: transparent;
+    justify-content: center;
+    margin:auto;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.466);
+    font-size: 60px;
+    color: rgb(172, 125, 63);
+    
+}
+
+.tabsy{
+    justify-content: center;
+    gap: 20px;
+    margin-top: 1rem;
+}
+.tabButton{
+    border: none;
+    height: 2rem;
+    width: 10rem;
+}
+
+#card{
+    margin-top: 2rem;
+ display: flex;
+ justify-content:center;
+}
+
+.container{
+    width: 40%;
+    min-height: 40rem;
+    background-color: rgba(0, 0, 0, 0.466);
+    text-align: center;
+    font-size: 40px;
+    color: rgb(172, 125, 63);
+}
+img{
+    width: 200px;
+    height: 200px;
+    border-radius: 80%;
+}
+ #grid{
+    margin-top: 2rem;
+    display:grid;
+    min-height: 40rem;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas:
+          "menu1    menu2"
+          "menu3    menu4"
+          "menu5    menu6";
+ }
+.square{
+    justify-self: center;
+    height: 200px;
+    width: 200px;
+}
+.square:hover{
+    scale: 1.1 ;
+}
+
+
+    .menu1{
+    grid-area: "menu1";
+    background-image: url("menu1.jpg");
+    }
+
+    .menu2{
+    grid-area: "menu2";
+    background-image:url("menu2.jpg");
+    }
+
+   .menu3{
+    grid-area: "menu3";
+    background-image:url("menu3.jpg");
+    }
+
+   .menu4{
+    grid-area: "menu4";
+    background-image:url("menu4.jpg");
+    }
+   .menu5{
+    grid-area: "menu5";
+    background-image:url("menu5.jpg");
+    }
+    .menu6{
+    grid-area: "menu6";
+    background-image:url("menu6.jpg");
+        }
+
+        
