@@ -1,60 +1,53 @@
+function createHeader(content) {
+  const header = document.createElement('header');
+  content.appendChild(header);
 
- function createHeader(content){ 
-const header = document.createElement("header");
-header.textContent="日本語 Nihongo";
-content.appendChild(header);
+  const sign = document.createElement('div');
+  sign.className = 'sign';
+  header.appendChild(sign);
+  sign.innerHTML = '<span class="fast-flicker">日本</span>語 Nih<span class="flicker">on</span>go';
 }
 
+function createNavbar(content) {
+  const navbBar = document.createElement('nav');
+  navbBar.setAttribute('class', 'menu-bar');
+  content.appendChild(navbBar);
 
-function createNavbar(content){ 
-const tabsy = document.createElement("div");
-tabsy.setAttribute("class", "tabsy");
-content.appendChild(tabsy);
+  const wrapper = document.createElement('div');
+  wrapper.setAttribute('class', 'wrapper');
+  navbBar.appendChild(wrapper);
 
-const inputOne = document.createElement("input");
-const labelOne = document.createElement("label");
-inputOne.setAttribute("type","radio");
-inputOne.setAttribute("id","tab1");
-inputOne.setAttribute("name","tab");
-labelOne.classList.add("tabButton");
-labelOne.setAttribute("for","tab1");
-labelOne.textContent="About Us";
-tabsy.appendChild(inputOne);
-tabsy.appendChild(labelOne);
+  const tabOne = document.createElement('a');
+  const tabTwo = document.createElement('a');
+  const tabThree = document.createElement('a');
 
+  tabOne.setAttribute('class', 'item');
+  tabOne.setAttribute('id', 'tab1');
 
-const inputTwo = document.createElement("input");
-const labelTwo = document.createElement("label");
-inputTwo.setAttribute("type","radio");
-inputTwo.setAttribute("id","tab2");
-inputTwo.setAttribute("name","tab");
-labelTwo.classList.add("tabButton");
-labelTwo.setAttribute("for","tab2");
-labelTwo.textContent="Menu";
-tabsy.appendChild(inputTwo);
-tabsy.appendChild(labelTwo);
+  tabTwo.setAttribute('class', 'item');
+  tabTwo.setAttribute('id', 'tab2');
 
-const inputThree = document.createElement("input");
-const labelThree = document.createElement("label");
-inputThree.setAttribute("type","radio");
-inputThree.setAttribute("id","tab3");
-inputThree.setAttribute("name","tab");
-labelThree.classList.add("tabButton");
-labelThree.setAttribute("for","tab3");
-labelThree.textContent="Contact Us";
-tabsy.appendChild(inputThree);
-tabsy.appendChild(labelThree); 
+  tabThree.setAttribute('class', 'item');
+  tabThree.setAttribute('id', 'tab3');
+
+  tabOne.textContent = 'Home';
+  tabTwo.textContent = 'Menu';
+  tabThree.textContent = 'Contact US';
+
+  wrapper.appendChild(tabOne);
+  wrapper.appendChild(tabTwo);
+  wrapper.append(tabThree);
 }
 
- function createCard(content) { 
-const card = document.createElement("div");
-card.setAttribute("id","card")
-content.appendChild(card);
+function createCard(content) {
+  const card = document.createElement('div');
+  card.setAttribute('id', 'card');
+  content.appendChild(card);
 
-const container = document.createElement("div");
-container.classList.add("container")
-card.appendChild(container)
-return {container}
+  const container = document.createElement('div');
+  container.classList.add('container');
+  card.appendChild(container);
+  return { container };
 }
- 
-export {createHeader,createNavbar,createCard}
+
+export { createHeader, createNavbar, createCard };
